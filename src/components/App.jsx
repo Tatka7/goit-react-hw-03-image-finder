@@ -1,4 +1,4 @@
-// import { Component } from 'react';
+import { Component } from 'react';
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // import css from './App.module.css';
 
