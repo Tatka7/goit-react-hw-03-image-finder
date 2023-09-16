@@ -1,5 +1,6 @@
 import { Component } from 'react';
-// import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import css from './App.module.css';
 
 // import Searchbar from './searchbar/Searchbar';
