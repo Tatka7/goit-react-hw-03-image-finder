@@ -9,7 +9,7 @@ export default function Loader() {
       ariaLabel="progress-bar-loading"
       wrapperStyle={{}}
       wrapperClass="progress-bar-wrapper"
-      borderColor="#3f51b5"
+      borderColor="#1e40af"
       barColor="#51E5FF"
     />
     // </ContainerLoader>
