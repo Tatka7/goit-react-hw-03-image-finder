@@ -28,7 +28,7 @@ export default class Searchbar extends Component {
       <header className={css.Searchbar}>
         <form className={css.form} onSubmit={this.handleSubmit}>
           <button type="submit" className={css.btn}>
-            <Icon icon="flat-color-icons:search" width="24" height="24" />
+            <Icon icon="flat-color-icons:search" height="24" />
           </button>
 
           <input

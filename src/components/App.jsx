@@ -73,9 +73,7 @@ export class App extends Component {
     return (
       <div className={css.App}>
         <Searchbar onSubmit={this.handlaSubmit} />
-        {images.length === 0 && (
-          <p className={css.pStart}>Please, enter search request</p>
-        )}
+        {images.length === 0 && <p className={css.pStart}></p>}
         {isLoading && <Loader />}
         {images.length !== 0 && (
           <ImageGallery gallery={images} onOpenModal={this.onOpenModal} />
@@ -96,7 +94,11 @@ export class App extends Component {
             <span>Please try again</span>
           </p>
         )}
-        <ToastContainer autoClose={2000} theme="dark" />
+        <ToastContainer
+          // type={toast.TYPE.INFO}
+          autoClose={3000}
+          theme="grey"
+        />
       </div>
     );
   }
