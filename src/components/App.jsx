@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { getImages } from 'service/pixabayAPI';
+import { fetchImages } from '../service/pixabayAPI';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import css from './App.module.css';
@@ -33,7 +33,7 @@ export class App extends Component {
   fetchImages = async (query, page) => {
     try {
       this.setState({ isLoading: true });
-      const data = await getImages(query, page);
+      const data = await fetchImages(query, page);
       if (data.hits.length === 0) {
         return toast.error(
           'There are no images matching your search query. Please try again.'
@@ -71,7 +71,7 @@ export class App extends Component {
       this.state;
     const totalPage = total / images.length;
     return (
-      <div className={css.App}>
+      <div className={css.AppContainer}>
         <Searchbar onSubmit={this.handlaSubmit} />
         {images.length === 0 && <p className={css.pStart}></p>}
         {isLoading && <Loader />}
