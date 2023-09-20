@@ -69,7 +69,7 @@ export class App extends Component {
   render() {
     const { images, isLoading, total, error, showModal, largeImage, tags } =
       this.state;
-    const totalPage = total / images.length;
+    // const totalPage = total / images.length;
     return (
       <div className={css.AppContainer}>
         <Searchbar onSubmit={this.handlaSubmit} />
@@ -78,7 +78,8 @@ export class App extends Component {
         {images.length !== 0 && (
           <ImageGallery gallery={images} onOpenModal={this.onOpenModal} />
         )}
-        {totalPage > 1 && !isLoading && images.length !== 0 && (
+        {/* {totalPage > 1 && !isLoading && images.length !== 0 && ( */}
+        {total !== images.length && !isLoading && (
           <Button onClick={this.onLoadMore} />
         )}
         {showModal && (
